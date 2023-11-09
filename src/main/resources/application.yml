@@ -1,0 +1,43 @@
+server:
+  # 端口
+  port: 5747
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/emby?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: 123456
+    password: 123456
+#电报机器人配置
+  #是否开启本地代理
+  telegrambot:
+    defaultBotOptions:
+      enabled: false
+  #机器人信息token和name配置
+    config:
+      token: ""
+      username: ""
+      groupChatId : ""
+      adminId: ""
+  #emby配置
+  emby:
+    config:
+      url: ""
+      apiKey: ""
+      copyFromUserId: ""
+
+  #navidrome配置
+  navidrome:
+    config:
+      url: ""
+      username: ""
+      password: ""
+  #歌曲下载配置，需要对接部署好的下载程序,没有这个程序那就不配置
+  musicDownloader:
+    config:
+      url: ""
+      downloadFolder: ""
+  # 日志文件配置的环境
+  profiles:
+    active: dev
+
+
